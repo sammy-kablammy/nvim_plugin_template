@@ -1,6 +1,6 @@
 -- code inside of this file will be run when the plugin is require()'d
 
-print("plugin has just been required()'d!!! hooray!!!")
+print("plugin has just been require()'d!!! hooray!!!")
 
 local M = {}
 
