@@ -1,0 +1,33 @@
+*plugin_template_docs.txt*                               Plugin description here
+
+==============================================================================
+how to write plugin documentation                  *plugin_template_docs_meta*
+
+There is quite a bit of variation in the way people write vim-style
+documentation.
+
+See `:h help-writing` for some guidelines and basically just copy all the popular
+plugins.
+
+When writing help files, it's useful to have this at the bottom:
+`vim:tw=78:ft=help`
+This is a `modeline`, and it will give you some pretty syntax highlighting,
+even though you're just in a normal .txt file.
+
+IMPORTANT: once you've written the help file, you need to run
+`:helptags doc`
+from the root directory of your plugin. This will generate the `tags` file that
+lets neovim know which search terms correspond to the tags in your help file.
+Remember that tags are surrounded by asterisks. It is conventional for all of
+your tags to start with the name of the plugin for easy searching.
+
+==============================================================================
+how to setup the plugin                    *plugin_template_docs_installation*
+>lua
+    require('plugin').setup({options})
+<
+        Set up your plugin. Call this function to set things up.
+        Use the {options} in some way. (there aren't actually any options)
+        Do setup. I'm trying to fill space here.
+
+vim:tw=78:ft=help
